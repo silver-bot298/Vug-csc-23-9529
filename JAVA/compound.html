@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function calculateCompoundInterest(){
+             let Principal = parseFloat (document.getElementById("Principal").value);
+             let amount = parseFloat (document.getElementById("Principal").value);
+
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <style>
+        /* Include the CSS code here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            background: url(pexels-dione-neris-563567049-16825355.jpg) no-repeat;
+            border-image-width: auto;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            padding: 400px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        form input[type="number"], 
+        form button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #066656;
+        }
+
+        p#result {
+            font-size: 18px;
+            color: #080808;
+            margin-top: 20px;
+        }
+
+        p#result span {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <script>
+        function calculateCompoundInterest() {
+            let principal = parseFloat(document.getElementById('principal').value);
+            let rate = parseFloat(document.getElementById('rate').value);
+            let time = parseFloat(document.getElementById('time').value);
+            let n = parseFloat(document.getElementById('n').value);
+            let amount = principal * Math.pow((1 + (rate / (n * 100))), (n * time));
+            let compoundInterest = amount - principal;
+            document.getElementById('result').innerText = "Compound Interest: " + compoundInterest;
+        }
+    </script>
+</head>
+<body>
+    <h1>Compound Interest Calculator</h1>
+    <form onsubmit="event.preventDefault(); calculateCompoundInterest();">
+        Principal: <input type="number" id="principal" required><br>
+        Rate (%): <input type="number" id="rate" required><br>
+        Time (years): <input type="number" id="time" required><br>
+        Times compounded per year: <input type="number" id="n" required><br>
+        <button type="submit">Calculate</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>

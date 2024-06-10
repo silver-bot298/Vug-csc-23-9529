@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(#000000, #f50b0b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #000000;
+    padding: 30px;
+    color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #fffD;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.course {
+    margin-bottom: 10px;
+}
+label{
+    color: #fff;
+}
+input {
+    padding: 5px;
+    margin-right: 5px;
+    width: calc(50% - 5px);
+    color: #000000;
+}
+
+button {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    background-color:  #f71919;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #f50b0b;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+        <form id="cgpaForm">
+            <div id="courses">
+                <div class="course">
+                    <label>Course 1:</label>
+                    <input type="number" placeholder="Grade" class="grade" min="10" max="100" step="0.01" required>
+                    <input type="number" placeholder="Credits" class="credits" min="1" required>
+                </div>
+            </div>
+            <button type="button" id="addCourse">Add Another Course</button>
+            <button type="submit">Calculate CGPA</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="Lame.js"></script>
+</body>
+</html>

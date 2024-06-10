@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0a8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container2 {
+align-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff0045;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.product {
+    background-color: #ff0045;
+    color: white;
+    padding: 10px;
+    width: 200px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.product p {
+    margin: 5px 0;
+}
+.Icons{
+   display: flex;
+   flex-direction: row;
+   padding: 10px;
+}
+.cart-icon {
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    background: none;
+    justify-content: space-evenly;
+    cursor: pointer;
+    gap: 100px;
+}
+.cart-icon:hover{
+    color: #007bff; /* Change color on hover */
+}
+.icon-btn {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background: none;
+    justify-content: space-evenly;
+    cursor: pointer;
+    gap: 100px;
+  }
+  .icon-btn:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  .header p {
+    font-size: 12px;
+    font-family: fantasy;
+  }

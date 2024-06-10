@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="java.css">
+    <script>
+        function calculateSimpleInterest() {
+            let principal = parseFloat(document.getElementById('principal').value);
+            let rate = parseFloat(document.getElementById('rate').value);
+            let time = parseFloat(document.getElementById('time').value);
+            let simpleInterest = (principal * rate * time) / 100;
+            document.getElementById('result').innerText = "Simple Interest: " + simpleInterest;
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple Interest Calculator</h1>
+    <form onsubmit="event.preventDefault(); calculateSimpleInterest();">
+        Principal: <input type="number" id="principal" required><br>
+        Rate (%): <input type="number" id="rate" required><br>
+        Time (years): <input type="number" id="time" required><br>
+        <button type="submit">Calculate</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>
+
+</html>
